@@ -17,4 +17,6 @@ body {
     color: #e0e0e0 !important;
   }
 }
+  /* 隐藏主题默认 Footer */
+  .footer { display: none !important; }
 
