@@ -1,7 +1,7 @@
 /* 所有模式通用背景色 */
 body {
   background-color: #b3e3ff !important;
-  color: #111 !important;
+  color: #333333 !important;
 }
 
 /* 内容容器透明显示 */
@@ -18,7 +18,7 @@ body {
   }
 }
 
-/* 设置黑暗模式下字体浅色 */
+/* 网站黑暗模式下字体浅色 */
 body.dark {
   background-color: #0d2b3e !important;
   color: #e0e0e0 !important;
