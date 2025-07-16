@@ -6,8 +6,30 @@
     <description>Recent content on 温带反气旋的小站</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 08 Jun 2025 02:18:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jul 2025 23:50:51 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0x0001.Hugo建站指南</title>
+      <link>/0x0001.hugo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 16 Jul 2025 23:50:51 +0800</pubDate>
+      <guid>/0x0001.hugo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;h3 id=&#34;hugo建站教程从安装到部署&#34;&gt;Hugo建站教程：从安装到部署&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;1-安装hugo&#34;&gt;1. 安装Hugo&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Windows/macOS/Linux通用方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# macOS (需先安装Homebrew)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Windows (需要先安装Chocolatey)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;choco install hugo-extended
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Linux (Debian/Ubuntu)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://github.com/gohugoio/hugo/releases/download/v0.125.0/hugo_extended_0.125.0_Linux-64bit.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dpkg -i hugo_extended_*.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Linux（备选，需安装Snap）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo snap install hugo --channel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;extended
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;验证安装：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>关于笔者</title>
       <link>/about/</link>
