@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？ | 温带反气旋的小站</title>
+<link rel="stylesheet" href="../../extended/custom.css">
+<meta name="keywords" content="">
+<meta name="description" content="——论iOS浏览器生态的「伪竞争」与WebKit霸权
+阅读须知：本文带有强烈技术批判倾向，果粉、Safari工程师及Apple法务部人员请谨慎服用。
+
+1. 表面繁荣：iOS上的「浏览器选择」
+打开App Store，搜索「浏览器」，你会看到：">
+<meta name="author" content="">
+<link rel="canonical" href="https://blog.wdfqx.top/posts/0x0003.apple%E6%98%AF%E6%80%8E%E4%B9%88%E7%94%A8%E4%B8%80%E7%BA%B8%E7%A6%81%E4%BB%A4%E8%AE%A9%E6%89%80%E6%9C%89web%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9B%86%E4%BD%93%E8%B6%B4%E7%AA%9D%E7%9A%84/">
+<link crossorigin="anonymous" href="../../assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="../../favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="canonical" href="https://blog.wdfqx.top"/>
+<script defer src="https://events.vercount.one/js"></script>
+<meta property="og:url" content="/posts/0x0003.apple%E6%98%AF%E6%80%8E%E4%B9%88%E7%94%A8%E4%B8%80%E7%BA%B8%E7%A6%81%E4%BB%A4%E8%AE%A9%E6%89%80%E6%9C%89web%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9B%86%E4%BD%93%E8%B6%B4%E7%AA%9D%E7%9A%84/">
+  <meta property="og:site_name" content="温带反气旋的小站">
+  <meta property="og:title" content="0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？">
+  <meta property="og:description" content="——论iOS浏览器生态的「伪竞争」与WebKit霸权 阅读须知：本文带有强烈技术批判倾向，果粉、Safari工程师及Apple法务部人员请谨慎服用。
+1. 表面繁荣：iOS上的「浏览器选择」 打开App Store，搜索「浏览器」，你会看到：">
+  <meta property="og:locale" content="zh-CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-17T14:19:40+08:00">
+    <meta property="article:modified_time" content="2025-07-17T14:19:40+08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？">
+<meta name="twitter:description" content="——论iOS浏览器生态的「伪竞争」与WebKit霸权
+阅读须知：本文带有强烈技术批判倾向，果粉、Safari工程师及Apple法务部人员请谨慎服用。
+
+1. 表面繁荣：iOS上的「浏览器选择」
+打开App Store，搜索「浏览器」，你会看到：">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "/posts/"
+    }
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？",
+      "item": "/posts/0x0003.apple%E6%98%AF%E6%80%8E%E4%B9%88%E7%94%A8%E4%B8%80%E7%BA%B8%E7%A6%81%E4%BB%A4%E8%AE%A9%E6%89%80%E6%9C%89web%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9B%86%E4%BD%93%E8%B6%B4%E7%AA%9D%E7%9A%84/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？",
+  "name": "0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？",
+  "description": "——论iOS浏览器生态的「伪竞争」与WebKit霸权 阅读须知：本文带有强烈技术批判倾向，果粉、Safari工程师及Apple法务部人员请谨慎服用。\n1. 表面繁荣：iOS上的「浏览器选择」 打开App Store，搜索「浏览器」，你会看到：\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "——论iOS浏览器生态的「伪竞争」与WebKit霸权 阅读须知：本文带有强烈技术批判倾向，果粉、Safari工程师及Apple法务部人员请谨慎服用。\n1. 表面繁荣：iOS上的「浏览器选择」 打开App Store，搜索「浏览器」，你会看到：\nGoogle Chrome Microsoft Edge Mozilla Firefox Brave / Opera / DuckDuckGo… 看起来百花齐放？ 但真相是——它们全是Safari的换皮马甲。\n2. Apple的「核捆绑」政策 2.1 App Store的霸王条款 根据Apple的App Store审核指南 2.5.6条：\n“Apps that browse the web must use the appropriate WebKit framework and WebKit Javascript.”\n翻译成人话：\n「所有iOS浏览器必须用Apple的WebKit内核，禁止第三方引擎。」\n这意味着：\nChrome on iOS ≠ 真正的Chrome（没有Blink/V8引擎） Firefox on iOS ≠ 真正的Firefox（没有Gecko引擎） 所有浏览器本质上只是Safari的皮肤+书签同步工具 2.2 技术验证：如何证明它们都是Safari？ 打开iOS的Chrome/Firefox，访问：\nchrome://version 你会看到User-Agent里赫然写着：\nMozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/114.0.5735.99 关键词：AppleWebKit —— 暴露了它的真身。\n3. 恶果：Web生态的「iOS特供版」 3.1 新特性延迟支持 技术标准 Chrome/Android Safari/iOS 延迟时间 AVIF动图 2020年支持 ❌ 至今不支持 4年+ WebGPU 2023年支持 ❌ 实验性支持 1年+ Web Components 2018年支持 2023年部分支持 5年 结果：开发者被迫为iOS写兼容代码，或直接放弃新技术。\n3.2 性能劣化 JavaScript速度：iOS Chrome的V8引擎被阉割，性能比Android版低30%[^1]。 渲染差异：同一段CSS，在Safari和Chrome（Android）表现不同，增加调试成本。 3.3 PWA（渐进式Web应用）的残废 无法推送通知 无法后台同步 无法使用Web蓝牙/NFC\nApple的逻辑：“让你们PWA太好用了，谁还装Native App？那我30%的苹果税收谁的？” 4. Apple的「借口」与真实目的 4.1 官方说辞 「为了安全和性能，我们必须控制浏览器引擎。」\n4.2 实际动机 保护App Store利益： 如果iOS允许真正的第三方浏览器，PWA可能取代Native App，影响苹果抽成。 掌控Web标准话语权： 通过限制WebKit，迫使开发者优先适配Apple生态（如推广自家.applepay而非Web Payment API）。 用户锁定策略： 让Android用户觉得「iOS的Chrome怎么这么难用」，强化「安卓碎片化」的偏见。 5. 反抗方案（开发者版） 5.1 技术层面 UA检测+嘲讽横幅： if (navigator.userAgent.match(/iPhone|iPad|iPod/) \u0026\u0026 !navigator.userAgent.match(/Chrome|Firefox|Edge/)) { showBanner(\"你的浏览器（Safari）缺少关键功能支持，建议换用Android/Windows设备访问。\"); } 拒绝优化Safari特供版： /* 仅对Safari隐藏高级功能 */ @supports (-webkit-touch-callout: none) { .modern-feature { opacity: 0.5; } } 5.2 舆论层面 加入Open Web Advocacy，推动欧盟/美国反垄断调查。\n在博客/Twitter标注：\n「本站最佳体验需非Apple设备，因为Apple不允许iOS用户使用现代浏览器。」\n5.3 终极摆烂 全站AVIF动图+不提供回退，让Safari用户看残缺页面。 6. 结语：Web的未来是开放还是围墙？ Apple的WebKit垄断本质是数字封建主义——用户和开发者被迫在它的围墙花园里劳作。\n作为开发者，我们能做的：\n用技术揭露问题（比如本文）。 拒绝无条件兼容（让用户意识到是Apple的锅）。 支持开放标准组织（如W3C、Mozilla）。 最后送Apple一句话：\n「你们可以继续绑架iOS浏览器，但Web的灵魂永远是自由的。」\n延伸阅读\n欧盟《数字市场法》强制Apple开放浏览器引擎 Open Web Advocacy的抗议行动 ",
+  "wordCount" : "1471",
+  "inLanguage": "zh",
+  "datePublished": "2025-07-17T14:19:40+08:00",
+  "dateModified": "2025-07-17T14:19:40+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/posts/0x0003.apple%E6%98%AF%E6%80%8E%E4%B9%88%E7%94%A8%E4%B8%80%E7%BA%B8%E7%A6%81%E4%BB%A4%E8%AE%A9%E6%89%80%E6%9C%89web%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9B%86%E4%BD%93%E8%B6%B4%E7%AA%9D%E7%9A%84/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "温带反气旋的小站",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="../../" accesskey="h" title="温带反气旋的小站 (Alt + H)">温带反气旋的小站</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="../../" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？
+    </h1>
+    <div class="post-meta"><span title='2025-07-17 14:19:40 +0800 CST'>七月 17, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h3 id="论ios浏览器生态的伪竞争与webkit霸权"><strong>——论iOS浏览器生态的「伪竞争」与WebKit霸权</strong><a hidden class="anchor" aria-hidden="true" href="#论ios浏览器生态的伪竞争与webkit霸权">#</a></h3>
+<p><strong>阅读须知</strong>：本文带有强烈技术批判倾向，果粉、Safari工程师及Apple法务部人员请谨慎服用。</p>
+<hr>
+<h2 id="1-表面繁荣ios上的浏览器选择"><strong>1. 表面繁荣：iOS上的「浏览器选择」</strong><a hidden class="anchor" aria-hidden="true" href="#1-表面繁荣ios上的浏览器选择">#</a></h2>
+<p>打开App Store，搜索「浏览器」，你会看到：</p>
+<ul>
+<li>Google Chrome</li>
+<li>Microsoft Edge</li>
+<li>Mozilla Firefox</li>
+<li>Brave / Opera / DuckDuckGo&hellip;</li>
+</ul>
+<p><strong>看起来百花齐放？</strong> 但真相是——<strong>它们全是Safari的换皮马甲</strong>。</p>
+<hr>
+<h2 id="2-apple的核捆绑政策"><strong>2. Apple的「核捆绑」政策</strong><a hidden class="anchor" aria-hidden="true" href="#2-apple的核捆绑政策">#</a></h2>
+<h3 id="21-app-store的霸王条款"><strong>2.1 App Store的霸王条款</strong><a hidden class="anchor" aria-hidden="true" href="#21-app-store的霸王条款">#</a></h3>
+<p>根据Apple的<a href="https://developer.apple.com/app-store/review/guidelines/">App Store审核指南 2.5.6条</a>：</p>
+<blockquote>
+<p><em>&ldquo;Apps that browse the web must use the appropriate WebKit framework and WebKit Javascript.&rdquo;</em></p></blockquote>
+<p><strong>翻译成人话</strong>：</p>
+<blockquote>
+<p><strong>「所有iOS浏览器必须用Apple的WebKit内核，禁止第三方引擎。」</strong></p></blockquote>
+<p>这意味着：</p>
+<ul>
+<li><strong>Chrome on iOS ≠ 真正的Chrome</strong>（没有Blink/V8引擎）</li>
+<li><strong>Firefox on iOS ≠ 真正的Firefox</strong>（没有Gecko引擎）</li>
+<li><strong>所有浏览器本质上只是Safari的皮肤+书签同步工具</strong></li>
+</ul>
+<h3 id="22-技术验证如何证明它们都是safari"><strong>2.2 技术验证：如何证明它们都是Safari？</strong><a hidden class="anchor" aria-hidden="true" href="#22-技术验证如何证明它们都是safari">#</a></h3>
+<p>打开iOS的Chrome/Firefox，访问：</p>
+<pre tabindex="0"><code>chrome://version
+</code></pre><p>你会看到<strong>User-Agent里赫然写着：</strong></p>
+<pre tabindex="0"><code>Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/114.0.5735.99
+</code></pre><p><strong>关键词</strong>：<code>AppleWebKit</code> —— 暴露了它的真身。</p>
+<hr>
+<h2 id="3-恶果web生态的ios特供版"><strong>3. 恶果：Web生态的「iOS特供版」</strong><a hidden class="anchor" aria-hidden="true" href="#3-恶果web生态的ios特供版">#</a></h2>
+<h3 id="31-新特性延迟支持"><strong>3.1 新特性延迟支持</strong><a hidden class="anchor" aria-hidden="true" href="#31-新特性延迟支持">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>技术标准</th>
+          <th>Chrome/Android</th>
+          <th>Safari/iOS</th>
+          <th>延迟时间</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>AVIF动图</strong></td>
+          <td>2020年支持</td>
+          <td>❌ 至今不支持</td>
+          <td>4年+</td>
+      </tr>
+      <tr>
+          <td><strong>WebGPU</strong></td>
+          <td>2023年支持</td>
+          <td>❌ 实验性支持</td>
+          <td>1年+</td>
+      </tr>
+      <tr>
+          <td><strong>Web Components</strong></td>
+          <td>2018年支持</td>
+          <td>2023年部分支持</td>
+          <td>5年</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>结果</strong>：开发者被迫为iOS写兼容代码，或直接放弃新技术。</p>
+<h3 id="32-性能劣化"><strong>3.2 性能劣化</strong><a hidden class="anchor" aria-hidden="true" href="#32-性能劣化">#</a></h3>
+<ul>
+<li><strong>JavaScript速度</strong>：iOS Chrome的V8引擎被阉割，性能比Android版低30%[^1]。</li>
+<li><strong>渲染差异</strong>：同一段CSS，在Safari和Chrome（Android）表现不同，增加调试成本。</li>
+</ul>
+<h3 id="33-pwa渐进式web应用的残废"><strong>3.3 PWA（渐进式Web应用）的残废</strong><a hidden class="anchor" aria-hidden="true" href="#33-pwa渐进式web应用的残废">#</a></h3>
+<ul>
+<li><strong>无法推送通知</strong></li>
+<li><strong>无法后台同步</strong></li>
+<li><strong>无法使用Web蓝牙/NFC</strong><br>
+<strong>Apple的逻辑</strong>：<em>“让你们PWA太好用了，谁还装Native App？那我30%的苹果税收谁的？”</em></li>
+</ul>
+<hr>
+<h2 id="4-apple的借口与真实目的"><strong>4. Apple的「借口」与真实目的</strong><a hidden class="anchor" aria-hidden="true" href="#4-apple的借口与真实目的">#</a></h2>
+<h3 id="41-官方说辞"><strong>4.1 官方说辞</strong><a hidden class="anchor" aria-hidden="true" href="#41-官方说辞">#</a></h3>
+<blockquote>
+<p><em>「为了安全和性能，我们必须控制浏览器引擎。」</em></p></blockquote>
+<h3 id="42-实际动机"><strong>4.2 实际动机</strong><a hidden class="anchor" aria-hidden="true" href="#42-实际动机">#</a></h3>
+<ol>
+<li><strong>保护App Store利益</strong>：
+<ul>
+<li>如果iOS允许真正的第三方浏览器，PWA可能取代Native App，影响苹果抽成。</li>
+</ul>
+</li>
+<li><strong>掌控Web标准话语权</strong>：
+<ul>
+<li>通过限制WebKit，迫使开发者优先适配Apple生态（如推广自家<code>.applepay</code>而非Web Payment API）。</li>
+</ul>
+</li>
+<li><strong>用户锁定策略</strong>：
+<ul>
+<li>让Android用户觉得「iOS的Chrome怎么这么难用」，强化「安卓碎片化」的偏见。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="5-反抗方案开发者版"><strong>5. 反抗方案（开发者版）</strong><a hidden class="anchor" aria-hidden="true" href="#5-反抗方案开发者版">#</a></h2>
+<h3 id="51-技术层面"><strong>5.1 技术层面</strong><a hidden class="anchor" aria-hidden="true" href="#51-技术层面">#</a></h3>
+<ul>
+<li><strong>UA检测+嘲讽横幅</strong>：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">userAgent</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/iPhone|iPad|iPod/</span>) <span style="color:#f92672">&amp;&amp;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">!</span><span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">userAgent</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/Chrome|Firefox|Edge/</span>)) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showBanner</span>(<span style="color:#e6db74">&#34;你的浏览器（Safari）缺少关键功能支持，建议换用Android/Windows设备访问。&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li><strong>拒绝优化Safari特供版</strong>：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* 仅对Safari隐藏高级功能 */</span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">supports</span> <span style="color:#f92672">(</span><span style="color:#f92672">-webkit-touch-callout</span><span style="color:#f92672">:</span> <span style="color:#f92672">none</span><span style="color:#f92672">)</span> {
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">modern-feature</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0.5</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="52-舆论层面"><strong>5.2 舆论层面</strong><a hidden class="anchor" aria-hidden="true" href="#52-舆论层面">#</a></h3>
+<ul>
+<li>
+<p><strong>加入<a href="https://openwebadvocacy.org">Open Web Advocacy</a></strong>，推动欧盟/美国反垄断调查。</p>
+</li>
+<li>
+<p><strong>在博客/Twitter标注</strong>：</p>
+<blockquote>
+<p><em>「本站最佳体验需非Apple设备，因为Apple不允许iOS用户使用现代浏览器。」</em></p></blockquote>
+</li>
+</ul>
+<h3 id="53-终极摆烂"><strong>5.3 终极摆烂</strong><a hidden class="anchor" aria-hidden="true" href="#53-终极摆烂">#</a></h3>
+<ul>
+<li><strong>全站AVIF动图+不提供回退</strong>，让Safari用户看残缺页面。</li>
+</ul>
+<h2 id="6-结语web的未来是开放还是围墙"><strong>6. 结语：Web的未来是开放还是围墙？</strong><a hidden class="anchor" aria-hidden="true" href="#6-结语web的未来是开放还是围墙">#</a></h2>
+<p>Apple的WebKit垄断本质是<strong>数字封建主义</strong>——用户和开发者被迫在它的围墙花园里劳作。</p>
+<p>作为开发者，我们能做的：</p>
+<ol>
+<li><strong>用技术揭露问题</strong>（比如本文）。</li>
+<li><strong>拒绝无条件兼容</strong>（让用户意识到是Apple的锅）。</li>
+<li><strong>支持开放标准组织</strong>（如W3C、Mozilla）。</li>
+</ol>
+<p><strong>最后送Apple一句话</strong>：</p>
+<blockquote>
+<p><strong>「你们可以继续绑架iOS浏览器，但Web的灵魂永远是自由的。」</strong></p></blockquote>
+<hr>
+<p><strong>延伸阅读</strong></p>
+<ul>
+<li><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_22_6423">欧盟《数字市场法》强制Apple开放浏览器引擎</a></li>
+<li><a href="https://openwebadvocacy.org/stories/">Open Web Advocacy的抗议行动</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="../../">温带反气旋的小站</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><footer style="display: flex; justify-content: center; align-items: center; color: #000000; padding: 6px; font-size: 12px; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;">©2025-2025 温带反气旋的小站 | Powered by Hugo &amp; PaperMod</footer>
+<div style="position: fixed; bottom: 0; left: 0; width: 100%; padding: 8px; font-size: 12px; z-index: 100;">
+  本站总访问量 <span id="vercount_value_site_pv">Loading</span> </br>
+  本站访客数 <span id="vercount_value_site_uv">Loading</span> </br>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

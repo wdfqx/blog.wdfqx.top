@@ -6,8 +6,19 @@
     <description>Recent content on 温带反气旋的小站</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Jul 2025 12:13:16 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 14:19:40 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0x0003.Apple是怎么用一纸禁令让所有Web浏览器集体趴窝的？</title>
+      <link>/posts/0x0003.apple%E6%98%AF%E6%80%8E%E4%B9%88%E7%94%A8%E4%B8%80%E7%BA%B8%E7%A6%81%E4%BB%A4%E8%AE%A9%E6%89%80%E6%9C%89web%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9B%86%E4%BD%93%E8%B6%B4%E7%AA%9D%E7%9A%84/</link>
+      <pubDate>Thu, 17 Jul 2025 14:19:40 +0800</pubDate>
+      <guid>/posts/0x0003.apple%E6%98%AF%E6%80%8E%E4%B9%88%E7%94%A8%E4%B8%80%E7%BA%B8%E7%A6%81%E4%BB%A4%E8%AE%A9%E6%89%80%E6%9C%89web%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9B%86%E4%BD%93%E8%B6%B4%E7%AA%9D%E7%9A%84/</guid>
+      <description>&lt;h3 id=&#34;论ios浏览器生态的伪竞争与webkit霸权&#34;&gt;&lt;strong&gt;——论iOS浏览器生态的「伪竞争」与WebKit霸权&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;阅读须知&lt;/strong&gt;：本文带有强烈技术批判倾向，果粉、Safari工程师及Apple法务部人员请谨慎服用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-表面繁荣ios上的浏览器选择&#34;&gt;&lt;strong&gt;1. 表面繁荣：iOS上的「浏览器选择」&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;打开App Store，搜索「浏览器」，你会看到：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>0x0002.Hugo添加不蒜子计数器指南</title>
       <link>/posts/0x0002.hugo%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E5%99%A8%E6%8C%87%E5%8D%97/</link>
