@@ -6,16 +6,28 @@
     <description>Recent content on 温带反气旋的小站</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 16 Jul 2025 23:50:51 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 12:13:16 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0x0002.Hugo添加不蒜子计数器指南</title>
+      <link>/posts/0x0002.hugo%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E5%99%A8%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Thu, 17 Jul 2025 12:13:16 +0800</pubDate>
+      <guid>/posts/0x0002.hugo%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E5%99%A8%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;h2 id=&#34;1本站环境&#34;&gt;1.本站环境&lt;/h2&gt;
+&lt;p&gt;统计平台：&lt;a href=&#34;https://vercount.one/&#34;&gt;vercount&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;站点主题：&lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;hugo-PaperMod&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2开始编辑&#34;&gt;2.开始编辑&lt;/h2&gt;
+&lt;h3 id=&#34;21编辑head&#34;&gt;2.1编辑head&lt;/h3&gt;
+&lt;p&gt;打开网站目录下的&lt;code&gt;layouts/partials&lt;/code&gt;目录，修改或新建&lt;code&gt;extend_head.html&lt;/code&gt;，引入统计js脚本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;defer&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://events.vercount.one/js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加代码后：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>0x0001.Hugo建站指南</title>
       <link>/posts/0x0001.hugo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</link>
       <pubDate>Wed, 16 Jul 2025 23:50:51 +0800</pubDate>
       <guid>/posts/0x0001.hugo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</guid>
-      <description>&lt;h3 id=&#34;hugo建站教程从安装到部署&#34;&gt;Hugo建站教程：从安装到部署&lt;/h3&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;1-安装hugo&#34;&gt;1. 安装Hugo&lt;/h4&gt;
+      <description>&lt;h4 id=&#34;1-安装hugo&#34;&gt;1. 安装Hugo&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Windows/macOS/Linux通用方法：&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# macOS (需先安装Homebrew)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
