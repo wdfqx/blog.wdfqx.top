@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>温带反气旋的小站</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on 温带反气旋的小站</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 05 Aug 2025 00:20:28 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>网络通信是怎么加密的</title>
-      <link>//localhost:1313/posts/how-to-encrypt-web-connection/</link>
+      <link>/posts/how-to-encrypt-web-connection/</link>
       <pubDate>Tue, 05 Aug 2025 00:20:28 +0800</pubDate>
-      <guid>//localhost:1313/posts/how-to-encrypt-web-connection/</guid>
+      <guid>/posts/how-to-encrypt-web-connection/</guid>
       <description>&lt;h3 id=&#34;0引言&#34;&gt;0.引言&lt;/h3&gt;
 &lt;p&gt;这是Google的官方网站，在这里我们可以看到浏览器地址栏有一个“tune”图标表示这个连接是安全的。同时，我们可以点击这个图标，会跳出一个卡片（也就是图中的那个），显示一些扩展信息，比如“证书”之类。
 那么……为什么浏览器会显示这个图标呢？它是怎么判断连接是否“安全”的？
@@ -22,9 +22,9 @@
     </item>
     <item>
       <title>关于作者</title>
-      <link>//localhost:1313/about/</link>
+      <link>/about/</link>
       <pubDate>Sun, 27 Jul 2025 20:43:48 +0800</pubDate>
-      <guid>//localhost:1313/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;p&gt;我的GitHub主页：&lt;a href=&#34;https://github.com/wdfqx&#34;&gt;wdfqx&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;联系方式&#34;&gt;联系方式：&lt;/h2&gt;
 &lt;p&gt;Email：&lt;a href=&#34;mailto:wdfqx@outlook.com&#34;&gt;wdfqx@outlook.com&lt;/a&gt;&lt;/p&gt;
@@ -38,9 +38,9 @@
     </item>
     <item>
       <title>互联网广告捞金指南</title>
-      <link>//localhost:1313/posts/web-advertising-revenue-guide/</link>
+      <link>/posts/web-advertising-revenue-guide/</link>
       <pubDate>Thu, 24 Jul 2025 20:43:19 +0800</pubDate>
-      <guid>//localhost:1313/posts/web-advertising-revenue-guide/</guid>
+      <guid>/posts/web-advertising-revenue-guide/</guid>
       <description>&lt;p&gt;在2025年的今天，互联网广告已经&lt;strong&gt;充斥我们的生活&lt;/strong&gt;，&lt;em&gt;那么，广告巨头们是怎么赚钱的？&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;广告作为一种需要被广泛传播的信息，最需要的就是一个能高效传播信息的媒介，而互联网作为信息时代的高效传播媒介，天然契合广告的需求——所以互联网天然地适合投放广告。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
