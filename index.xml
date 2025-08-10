@@ -6,8 +6,17 @@
     <description>Recent content on 温带反气旋的小站 wdfqx - Blog</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 05 Aug 2025 00:20:28 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 Aug 2025 21:58:49 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何安全地加密数据</title>
+      <link>/posts/how-to-encrypt-data-safely/</link>
+      <pubDate>Sat, 09 Aug 2025 21:58:49 +0800</pubDate>
+      <guid>/posts/how-to-encrypt-data-safely/</guid>
+      <description>&lt;h3 id=&#34;0-引言&#34;&gt;0. 引言&lt;/h3&gt;
+&lt;p&gt;2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
+这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？&lt;/p&gt;</description>
+    </item>
     <item>
       <title>网络通信是怎么加密的</title>
       <link>/posts/how-to-encrypt-web-connection/</link>
