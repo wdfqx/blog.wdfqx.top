@@ -6,16 +6,8 @@
     <description>Recent content on 温带反气旋的小站 wdfqx - Blog</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 14 Aug 2025 00:09:38 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Aug 2025 00:09:14 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>如何安全地加密数据</title>
-      <link>/posts/how-to-encrypt-data-safely/</link>
-      <pubDate>Thu, 14 Aug 2025 00:09:38 +0800</pubDate>
-      <guid>/posts/how-to-encrypt-data-safely/</guid>
-      <description>&lt;h3 id=&#34;0-引言&#34;&gt;0. 引言&lt;/h3&gt;
-&lt;p&gt;2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向&lt;strong&gt;自动化过滤&lt;/strong&gt;的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&amp;quot;***&amp;ldquo;是如何产生的吗？&lt;/p&gt;</description>
-    </item>
     <item>
       <title>敏感词消除指南</title>
       <link>/posts/sensitive-word-remove-guide/</link>
@@ -24,6 +16,15 @@
       <description>&lt;hr&gt;
 &lt;h3 id=&#34;0-引言&#34;&gt;&lt;strong&gt;0. 引言&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;2018年，某国产手游因角色台词“自由”触发敏感词系统，导致全服玩家聊天框集体变成***，愤怒的玩家用“自\由”“自_由”等变体疯狂试探——&lt;strong&gt;这场行为艺术暴露了敏感词审查的荒诞本质&lt;/strong&gt;：它既是维护内容安全的“防火墙”，又是误杀率极高的“文字大逃杀”。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>如何安全地加密数据</title>
+      <link>/posts/how-to-encrypt-data-safely/</link>
+      <pubDate>Sat, 09 Aug 2025 21:58:49 +0800</pubDate>
+      <guid>/posts/how-to-encrypt-data-safely/</guid>
+      <description>&lt;h3 id=&#34;0-引言&#34;&gt;0. 引言&lt;/h3&gt;
+&lt;p&gt;2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
+这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？&lt;/p&gt;</description>
     </item>
     <item>
       <title>网络通信是怎么加密的</title>

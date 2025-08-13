@@ -8,7 +8,8 @@
 <title>如何安全地加密数据 | 温带反气旋的小站 wdfqx - Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="0. 引言
-2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向自动化过滤的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&quot;***&ldquo;是如何产生的吗？">
+2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
+这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？">
 <meta name="author" content="">
 <link rel="canonical" href="https://blog.wdfqx.top/posts/how-to-encrypt-data-safely/">
 <link crossorigin="anonymous" href="../../assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
@@ -40,16 +41,17 @@ body {
 </style><meta property="og:url" content="/posts/how-to-encrypt-data-safely/">
   <meta property="og:site_name" content="温带反气旋的小站 wdfqx - Blog">
   <meta property="og:title" content="如何安全地加密数据">
-  <meta property="og:description" content="0. 引言 2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向自动化过滤的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&#34;***“是如何产生的吗？">
+  <meta property="og:description" content="0. 引言 2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。 这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-14T00:09:38+08:00">
-    <meta property="article:modified_time" content="2025-08-14T00:09:38+08:00">
+    <meta property="article:published_time" content="2025-08-09T21:58:49+08:00">
+    <meta property="article:modified_time" content="2025-08-09T21:58:49+08:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何安全地加密数据">
 <meta name="twitter:description" content="0. 引言
-2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向自动化过滤的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&quot;***&ldquo;是如何产生的吗？">
+2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
+这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？">
 
 
 <script type="application/ld+json">
@@ -78,15 +80,15 @@ body {
   "@type": "BlogPosting",
   "headline": "如何安全地加密数据",
   "name": "如何安全地加密数据",
-  "description": "0. 引言 2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向自动化过滤的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些\u0026quot;***\u0026ldquo;是如何产生的吗？\n",
+  "description": "0. 引言 2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。 这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？\n",
   "keywords": [
     
   ],
-  "articleBody": "0. 引言 2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向自动化过滤的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些\"***“是如何产生的吗？\n敏感词消除（Sensitive Word Filtering）本质上是一种内容安全策略（Content Security Policy），其核心任务是在保证正常表达的前提下，精准识别并处理文本中的违规内容。早期的简单关键词匹配早已无法应对当今复杂的网络环境，现代系统需要处理谐音、拆字、异体字甚至语义层面的违规表达。\n1. 基础阶段：基于规则的文本匹配 1.1 正则表达式：敏感词过滤的起点 最早的敏感词过滤系统采用**正则表达式（Regular Expression）**实现精确匹配。例如要过滤\"违规词”，只需构建模式/违规词/即可。这种方法简单直接，在2000年代初期的BBS时代足够有效。\n但问题很快显现：当用户开始使用\"违_规_词\"或\"违规词\"等变体时，简单正则立即失效。为解决这个问题，开发者引入了通配符匹配和模糊匹配：\n# 包含通配符的改进模式 pattern = r\"违[_\\s]*规[_\\s]*词\" 这种改进虽然提升了覆盖范围，但带来了两个新问题：\n误杀率上升：可能将\"遵守规章制度\"中的\"规词\"错误匹配 性能开销：复杂的正则表达式会显著增加CPU负载 匹配方式 示例 优点 缺点 精确匹配 “违规词” 零误报 易规避 通配符匹配 “违规词” 抗简单规避 误报率高 模糊匹配 “违[^a-zA-Z0-9]{0,3}规[^a-zA-Z0-9]{0,3}词” 抗复杂规避 性能差 1.2 字典树优化：性能提升的关键 随着敏感词库膨胀至十万级规模，正则表达式的性能瓶颈愈发明显。2010年左右，**字典树（Trie Tree）**结构开始被广泛应用于敏感词过滤系统。\n字典树的核心优势在于：\nO(n)时间复杂度：n为文本长度，与词库大小无关 多模式串匹配：一次扫描可检测所有敏感词 内存效率高：共享前缀节点，减少存储开销 // 简化的字典树节点结构 class TrieNode { Map\u003cCharacter, TrieNode\u003e children; boolean isEndOfWord; } 实际测试表明，当敏感词库超过5万条时，字典树的处理速度可达正则表达式的10倍以上。但字典树仍无法解决语义理解的问题——这是规则匹配的天花板。\n2. 进阶阶段：对抗混淆与变体 2.1 字形混淆与拼音处理 随着网民规避手段升级，各种**混淆技术（Obfuscation Techniques）**开始涌现：\n谐音替代：如\"sb\"代替\"傻逼\" 异体字替换：如\"氵去\"代替\"法\" 符号插入：如\"f@ck\" 拆字表达：如\"女子弓虽\"代替\"好强\" 应对这些变体需要构建多维度特征库：\n# 多维度敏感词特征示例 sensitive_map = { # 原始词 \"政治\": [\"政治\"], # 拼音 \"zhengzhi\": [\"政治\"], # 首字母缩写 \"zz\": [\"政治\"], # 常见变体 \"氵去\": [\"法\"], \"弓虽\": [\"强\"] } 2.2 机器学习辅助识别 2015年后，机器学习（Machine Learning）开始被引入敏感词识别领域。基于n-gram语言模型和朴素贝叶斯分类器的系统可以识别未明确收录但语义敏感的表述。\n典型特征工程包括：\n字符级n-gram特征 拼音转换特征 特殊符号占比 敏感语义关联度 # R语言中的简单文本分类示例 library(tm) library(e1071) # 构建文本矩阵 dtm \u003c- DocumentTermMatrix(corpus) # 训练朴素贝叶斯模型 model \u003c- naiveBayes(dtm, labels) 虽然机器学习提升了识别能力，但仍存在特征工程复杂和需要大量标注数据的问题。\n3. 现代方案：深度学习与语义理解 3.1 词向量与语义相似度 词嵌入（Word Embedding）技术的出现使系统能够计算词语间的语义距离。通过预训练的词向量模型，可以识别语义相近但字面不同的敏感表达：\n皇帝 ≈ 君主 ≈ 国王 ≈ 统治者 实际操作中，通常设定相似度阈值：\nfrom gensim.models import Word2Vec model = Word2Vec.load(\"zh_corpus.model\") similarity = model.wv.similarity(\"领导人\", \"统治者\") if similarity \u003e 0.7: mark_as_sensitive() 3.2 基于Transformer的端到端检测 当前最先进的敏感词消除系统采用Transformer架构的预训练语言模型：\nBERT：擅长理解上下文语义 RoBERTa：优化训练策略的BERT变体 ERNIE：专为中文优化的知识增强模型 这些模型可以处理更复杂的场景：\n原始文本：\"那个地方的管理者非常专制\" 模型识别：\"管理者非常专制\" → 政治敏感 4. 现实挑战与平衡艺术 4.1 准确率与用户体验的权衡 过度过滤会导致**误杀率（False Positive Rate）**上升，影响正常表达。2023年某社交平台的用户调研显示：\n68%用户遭遇过内容被错误过滤 42%用户因此减少发帖频率 23%用户转向其他平台 正如信息安全专家Bruce Schneier所说：“没有完美的过滤系统，只有不断演进的攻防博弈。“敏感词消除技术的未来，将是一场永不停歇的猫鼠游戏。\n参考资料：\nAho-Corasick算法在多模式匹配中的应用 中文敏感词检测的语义增强方法 BERT在内容安全中的应用 ",
-  "wordCount" : "2226",
+  "articleBody": "0. 引言 2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。 这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？\n0.1 加密是什么？ 加密就是将 明文（Plaintext） 以加密算法（Algorithm）进行加密（Encryption）过程后变换为密文用以保护数据的过程，加密过程需要的主要套件如下： 加密技术（Cryptography） 、密钥（Key） 、加密算法（Algorithm）\n1. 使用对称加密技术 1.1 第一个安全技术——DES DES（Data Encryption Standard，数据加密标准） ，推出于1977年，由美国国家标准局（NBS）开发，使用56位的密钥进行加密（在实际使用中是64位密钥，但密钥中有8位为校验码，实际有效的位数是56位）。这也是第一个对称加密技术（Symmetric Encryption） ，加密和解密使用同一个密钥，高效而简单、优雅，一切看起来都那么地完美，对吧？\n但所有的完美都是易碎的 。1990年，一组由美国密码学家Richard Schappbach领导的团队使用专门定制的硬件在48小时以内穷举破解了DES加密的数据；1993年， 迪安·艾尔曼（Dean Elmore）以一组112个专用芯片设备8小时破解了DES加密技术；1998年，EFF赞助的一个团队使用造价为25万美元的硬件在56小时内破解了DES加密的数据……随着计算机算力的高速增长，破解DES变得易如反掌，DES在2005年被NBS宣布停止使用，不再安全。该算法的变体3DES使用3个不同的密钥（共计112[DES-EDE2标准]或168有效位[DES-EDE3标准]）进行3次DES加密数据，但该算法在2023年也被宣布不再安全，停止用于新的应用，存量应用则要在2030年以前完全停用3DES加密标准。 所以，现在如果你使用DES或3DES算法，就相当于用挂锁锁原子弹，安全性无限趋近于零 ！（战术摊手.avif）\n同样，还有更多的对称加密技术被宣告不安全，在此列表简单说明：\n算法 密钥长度 缺陷 历史意义 Blowfish 32~448位 存在生日攻击风险，作者已弃用 早期SSL标准的加密算法 RC4 40~2048位 因密钥重用导致出现漏洞，被RFC禁止 历史上最快的流加密技术 1.2 更进一步的安全——AES 1997年，NIST（美国国家标准与技术研究院）发起了一项公开竞赛，征集新的加密标准，经过数论评估，来自比利时的Joan Daemen和Vincent Rijmen设计的Rijndael算法被选为 AES（Advanced Encryption Standard，高级加密标准） 标准。2001年，NIST正式发布了AES标准，它支持128、192、256位三种密钥长度，在对称加密领域发挥极大作用，广泛用于各类协议，例如WPA2/3（用于WiFi身份认证和加密）、SSL/TLS（用于传输加密，本文提到）、VPN（用于建立虚拟加密通信信道，例如企业内网）、硬盘加密等，一切看起来都那么完美，优雅而简单。\n所有的完美也确实都很易碎，只是时间问题而已 。在后量子时代，量子计算机的威胁变得越加明显，例如Shor算法和Grover算法在理论上能够破解AES加密技术，Shor算法仍可破解但时间非常长；Grover算法能够将密钥搜索范围简化到平方根程度，例如AES-128的搜索空间为2^64个密钥，AES-256的搜索空间为2^128个密钥。虽然量子计算机的Grover算法会降低AES的安全性，但密钥最位数最多的AES-256被普遍估计在将来的10年内（2025-2035）仍然有足够的位数（2^128位）来抵御Grover算法攻击。\n当然，还有更多的加密技术，例如Google力推的ChaCha20加密算法、Salsa20（ChaCha20前身）等，在此列表说明：\n算法 密钥长度 特点 ChaCha20 256位 在移动端的性能优于AES且抗侧信道攻击，用于TLS1.3 Salsa20 256位 ChaCha20前身，设计简洁，用于开源项目 Twofish 128/256位 AES竞赛亚军，比AES更加灵活但没有普及，用于学术研究 Serpent 128/256位 AES竞赛季军，安全性极高但速度较慢，用于开源项目 2. 使用非对称加密技术 2.1 质因数分解的魔法——RSA RSA (Rivest-Shamir-Adleman) 通过 单向陷门函数（Trapdoor One-Way Function） 在未掌握陷门的情况下极难破解的特性实现数据安全，两个巨大质数p、q乘积为N，而私钥ϕ(N)（等价于p和q）即为陷门，拥有陷门的人可以快速地解密和加密数据；而没有陷门的人能看到的只有公钥中的N（即pxq的乘积），以及一些辅助信息。他们需要得到ϕ(N)才能解密数据，最简单但运算量也最大的方法是分解质因数，但一个足够大的合数𝑁在目前已知的经典计算方法下，所需分解时间会非常非常长，超出任何实际可接受的范围。所以，我们通常认为在可接受的时间内，它是无法被破解的。\n说人话版 ： RSA的安全性的实质其实就是我们在小学五六年级学到的“质因数分解”，但它巧妙地将两个极其巨大的质数相乘计算得一个同样巨大的合数。由于被分解的合数过大导致不能在我们能接受的时间内计算出结果，所以我们将其近似看作无法破解。当然，在量子计算机迅猛发展的当下，RSA也并不安全，Shor算法能够高效地进行质因数分解运算，所以量子计算机一来RSA也得趴窝（战术摊手.avif）\n2.2 椭圆曲线的谜题——ECC ECC（Elliptic Curve Cryptography，椭圆曲线密码学） 以 椭圆曲线离散对数问题 (EC-DLP) 的困难性保证密钥不被破解，具体的算法是：给定椭圆曲线上一个点P和另一个点Q，判断Q是否是P的某个倍数（kP），但找到k是极其困难的。由于算法大大简化，所以ECC能够在更短的密钥长度下提供相同的安全性，而所需的性能开销也更小、计算速度更快、占用空间更小，适合移动设备和资源受限场景，广泛应用于SSL/TLS、数字签名（ECDSA）、密钥交换（ECDH）等场景。因为ECDLP的证明没有捷径，所以经典计算机需要极长的时间来破解ECDLP密钥，我们也将其近似看作无法破解。\n说人话版 ：\n这玩意就是用椭圆曲线的难题保证密钥安全性和数据安全的，说白了就是算一道没有简便方法的椭圆曲线证明题，所以这个算法比RSA更轻，更快。但这玩意也照样不抗量子计算机，Shor算法一来直接趴窝，草（一种植物）！\n2.3 离散对数的难题——DH Diffie-Hellman (DH) 基于离散对数问题的困难性保护数据安全，即在一个有限域中，给定一个基数g、一个模数p，以及g的x次幂取模p的结果（g^x mod p），很难从中计算出x的值。但这个加密算法压根就不用来加密数据，而是用于交换密钥的，常见于TLS协议的密钥交换协议部分（详见本文）。它的核心、唯一功能就是让双方在不传输明文密钥的情况下协商出一个相同的密钥用于加密。\n说人话版 ：\n这玩意不是拿来传数据的，是拿来协商密钥的，就凭着离散对数题难到爆炸的性质保护协商密钥的安全性，这破题难得要命，我也不知道咋讲，草（一种植物）！\n参考资料 ：\n加密 - Wikipedia 对称加密 - Wikipedia DES - Wikipedia AES - Wikipedia RSA加密算法 - Wikipedia 椭圆曲线密码学 - Wikipedia Diffie-Hellman密钥交换 - Wikipedia ChaCha20 - Wikipedia Blowfish - Wikipedia RC4 - Wikipedia ",
+  "wordCount" : "3016",
   "inLanguage": "zh",
-  "datePublished": "2025-08-14T00:09:38+08:00",
-  "dateModified": "2025-08-14T00:09:38+08:00",
+  "datePublished": "2025-08-09T21:58:49+08:00",
+  "dateModified": "2025-08-09T21:58:49+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "/posts/how-to-encrypt-data-safely/"
@@ -174,145 +176,112 @@ body {
     <h1 class="post-title entry-hint-parent">
       如何安全地加密数据
     </h1>
-    <div class="post-meta"><span title='2025-08-14 00:09:38 +0800 CST'>八月 14, 2025</span>
+    <div class="post-meta"><span title='2025-08-09 21:58:49 +0800 CST'>八月 9, 2025</span>
 
 </div>
   </header> 
   <div class="post-content"><h3 id="0-引言">0. 引言<a hidden class="anchor" aria-hidden="true" href="#0-引言">#</a></h3>
-<p>2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向<strong>自动化过滤</strong>的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&quot;***&ldquo;是如何产生的吗？</p>
-<p><strong>敏感词消除（Sensitive Word Filtering）<strong>本质上是一种</strong>内容安全策略（Content Security Policy）</strong>，其核心任务是在保证正常表达的前提下，精准识别并处理文本中的违规内容。早期的简单关键词匹配早已无法应对当今复杂的网络环境，现代系统需要处理谐音、拆字、异体字甚至语义层面的违规表达。</p>
-<h3 id="1-基础阶段基于规则的文本匹配">1. 基础阶段：基于规则的文本匹配<a hidden class="anchor" aria-hidden="true" href="#1-基础阶段基于规则的文本匹配">#</a></h3>
-<h4 id="11-正则表达式敏感词过滤的起点">1.1 正则表达式：敏感词过滤的起点<a hidden class="anchor" aria-hidden="true" href="#11-正则表达式敏感词过滤的起点">#</a></h4>
-<p>最早的敏感词过滤系统采用**正则表达式（Regular Expression）**实现精确匹配。例如要过滤&quot;违规词&rdquo;，只需构建模式<code>/违规词/</code>即可。这种方法简单直接，在2000年代初期的BBS时代足够有效。</p>
-<p>但问题很快显现：当用户开始使用&quot;违_规_词&quot;或&quot;违规词&quot;等变体时，简单正则立即失效。为解决这个问题，开发者引入了<strong>通配符匹配</strong>和<strong>模糊匹配</strong>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 包含通配符的改进模式</span>
-</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;违[_\s]*规[_\s]*词&#34;</span>
-</span></span></code></pre></div><p>这种改进虽然提升了覆盖范围，但带来了两个新问题：</p>
-<ol>
-<li><strong>误杀率上升</strong>：可能将&quot;遵守规章制度&quot;中的&quot;规词&quot;错误匹配</li>
-<li><strong>性能开销</strong>：复杂的正则表达式会显著增加CPU负载</li>
-</ol>
+<p>2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
+这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？</p>
+<h4 id="01-加密是什么">0.1 加密是什么？<a hidden class="anchor" aria-hidden="true" href="#01-加密是什么">#</a></h4>
+<p>加密就是将 <strong>明文（Plaintext）</strong> 以加密<strong>算法（Algorithm）<strong>进行</strong>加密（Encryption）<strong>过程后变换为密文用以保护数据的过程，加密过程需要的主要套件如下：
+<strong>加密技术（Cryptography）</strong> 、<strong>密钥（Key）</strong> 、加密</strong>算法（Algorithm）</strong></p>
+<h3 id="1-使用对称加密技术">1. 使用对称加密技术<a hidden class="anchor" aria-hidden="true" href="#1-使用对称加密技术">#</a></h3>
+<h4 id="11-第一个安全技术des">1.1 第一个安全技术——DES<a hidden class="anchor" aria-hidden="true" href="#11-第一个安全技术des">#</a></h4>
+<p><strong>DES（Data Encryption Standard，数据加密标准）</strong> ，推出于1977年，由美国国家标准局（NBS）开发，使用56位的密钥进行加密（在实际使用中是64位密钥，但密钥中有8位为校验码，实际有效的位数是56位）。这也是第一个<strong>对称加密技术（Symmetric Encryption）</strong> ，加密和解密使用同一个密钥，高效而简单、优雅，一切看起来都那么地完美，对吧？</p>
+<p><em>但所有的完美都是易碎的</em> 。1990年，一组由美国密码学家Richard Schappbach领导的团队使用专门定制的硬件在48小时以内穷举破解了DES加密的数据；1993年， 迪安·艾尔曼（Dean Elmore）以一组112个专用芯片设备8小时破解了DES加密技术；1998年，EFF赞助的一个团队使用造价为25万美元的硬件在56小时内破解了DES加密的数据……随着计算机算力的高速增长，破解DES变得易如反掌，DES在2005年被NBS宣布停止使用，不再安全。该算法的变体3DES使用3个不同的密钥（共计112[DES-EDE2标准]或168有效位[DES-EDE3标准]）进行3次DES加密数据，但该算法在2023年也被宣布不再安全，停止用于新的应用，存量应用则要在2030年以前完全停用3DES加密标准。
+所以，现在如果你使用DES或3DES算法，就相当于用挂锁锁原子弹，<strong>安全性无限趋近于零</strong> ！（战术摊手.avif）</p>
+<p>同样，还有更多的对称加密技术被宣告不安全，在此列表简单说明：</p>
 <table>
   <thead>
       <tr>
-          <th>匹配方式</th>
-          <th>示例</th>
-          <th>优点</th>
-          <th>缺点</th>
+          <th>算法</th>
+          <th>密钥长度</th>
+          <th>缺陷</th>
+          <th>历史意义</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>精确匹配</td>
-          <td>&ldquo;违规词&rdquo;</td>
-          <td>零误报</td>
-          <td>易规避</td>
+          <td>Blowfish</td>
+          <td>32~448位</td>
+          <td>存在生日攻击风险，作者已弃用</td>
+          <td>早期SSL标准的加密算法</td>
       </tr>
       <tr>
-          <td>通配符匹配</td>
-          <td>&ldquo;违<em>规</em>词&rdquo;</td>
-          <td>抗简单规避</td>
-          <td>误报率高</td>
-      </tr>
-      <tr>
-          <td>模糊匹配</td>
-          <td>&ldquo;违[^a-zA-Z0-9]{0,3}规[^a-zA-Z0-9]{0,3}词&rdquo;</td>
-          <td>抗复杂规避</td>
-          <td>性能差</td>
+          <td>RC4</td>
+          <td>40~2048位</td>
+          <td>因密钥重用导致出现漏洞，被RFC禁止</td>
+          <td>历史上最快的流加密技术</td>
       </tr>
   </tbody>
 </table>
-<h4 id="12-字典树优化性能提升的关键">1.2 字典树优化：性能提升的关键<a hidden class="anchor" aria-hidden="true" href="#12-字典树优化性能提升的关键">#</a></h4>
-<p>随着敏感词库膨胀至十万级规模，正则表达式的性能瓶颈愈发明显。2010年左右，**字典树（Trie Tree）**结构开始被广泛应用于敏感词过滤系统。</p>
-<p>字典树的核心优势在于：</p>
-<ul>
-<li><strong>O(n)时间复杂度</strong>：n为文本长度，与词库大小无关</li>
-<li><strong>多模式串匹配</strong>：一次扫描可检测所有敏感词</li>
-<li><strong>内存效率高</strong>：共享前缀节点，减少存储开销</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// 简化的字典树节点结构</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span> {
-</span></span><span style="display:flex;"><span>    Map<span style="color:#f92672">&lt;</span>Character, TrieNode<span style="color:#f92672">&gt;</span> children;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">boolean</span> isEndOfWord;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>实际测试表明，当敏感词库超过5万条时，字典树的处理速度可达正则表达式的10倍以上。但字典树仍无法解决语义理解的问题——这是规则匹配的天花板。</p>
-<h3 id="2-进阶阶段对抗混淆与变体">2. 进阶阶段：对抗混淆与变体<a hidden class="anchor" aria-hidden="true" href="#2-进阶阶段对抗混淆与变体">#</a></h3>
-<h4 id="21-字形混淆与拼音处理">2.1 字形混淆与拼音处理<a hidden class="anchor" aria-hidden="true" href="#21-字形混淆与拼音处理">#</a></h4>
-<p>随着网民规避手段升级，各种**混淆技术（Obfuscation Techniques）**开始涌现：</p>
-<ol>
-<li><strong>谐音替代</strong>：如&quot;sb&quot;代替&quot;傻逼&quot;</li>
-<li><strong>异体字替换</strong>：如&quot;氵去&quot;代替&quot;法&quot;</li>
-<li><strong>符号插入</strong>：如&quot;f@ck&quot;</li>
-<li><strong>拆字表达</strong>：如&quot;女子弓虽&quot;代替&quot;好强&quot;</li>
-</ol>
-<p>应对这些变体需要构建多维度特征库：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 多维度敏感词特征示例</span>
-</span></span><span style="display:flex;"><span>sensitive_map <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 原始词</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;政治&#34;</span>: [<span style="color:#e6db74">&#34;政治&#34;</span>],
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 拼音</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;zhengzhi&#34;</span>: [<span style="color:#e6db74">&#34;政治&#34;</span>],
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 首字母缩写</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;zz&#34;</span>: [<span style="color:#e6db74">&#34;政治&#34;</span>],
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 常见变体</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;氵去&#34;</span>: [<span style="color:#e6db74">&#34;法&#34;</span>],
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;弓虽&#34;</span>: [<span style="color:#e6db74">&#34;强&#34;</span>]
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="22-机器学习辅助识别">2.2 机器学习辅助识别<a hidden class="anchor" aria-hidden="true" href="#22-机器学习辅助识别">#</a></h4>
-<p>2015年后，<strong>机器学习（Machine Learning）<strong>开始被引入敏感词识别领域。基于</strong>n-gram语言模型</strong>和<strong>朴素贝叶斯分类器</strong>的系统可以识别未明确收录但语义敏感的表述。</p>
-<p>典型特征工程包括：</p>
-<ul>
-<li>字符级n-gram特征</li>
-<li>拼音转换特征</li>
-<li>特殊符号占比</li>
-<li>敏感语义关联度</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># R语言中的简单文本分类示例</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tm)
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(e1071)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 构建文本矩阵</span>
-</span></span><span style="display:flex;"><span>dtm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">DocumentTermMatrix</span>(corpus)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 训练朴素贝叶斯模型</span>
-</span></span><span style="display:flex;"><span>model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">naiveBayes</span>(dtm, labels)
-</span></span></code></pre></div><p>虽然机器学习提升了识别能力，但仍存在<strong>特征工程复杂</strong>和<strong>需要大量标注数据</strong>的问题。</p>
-<h3 id="3-现代方案深度学习与语义理解">3. 现代方案：深度学习与语义理解<a hidden class="anchor" aria-hidden="true" href="#3-现代方案深度学习与语义理解">#</a></h3>
-<h4 id="31-词向量与语义相似度">3.1 词向量与语义相似度<a hidden class="anchor" aria-hidden="true" href="#31-词向量与语义相似度">#</a></h4>
-<p><strong>词嵌入（Word Embedding）<strong>技术的出现使系统能够计算词语间的语义距离。通过预训练的</strong>词向量模型</strong>，可以识别语义相近但字面不同的敏感表达：</p>
-<pre tabindex="0"><code>皇帝 ≈ 君主 ≈ 国王 ≈ 统治者
-</code></pre><p>实际操作中，通常设定相似度阈值：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> gensim.models <span style="color:#f92672">import</span> Word2Vec
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> Word2Vec<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;zh_corpus.model&#34;</span>)
-</span></span><span style="display:flex;"><span>similarity <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>wv<span style="color:#f92672">.</span>similarity(<span style="color:#e6db74">&#34;领导人&#34;</span>, <span style="color:#e6db74">&#34;统治者&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> similarity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.7</span>:
-</span></span><span style="display:flex;"><span>    mark_as_sensitive()
-</span></span></code></pre></div><h4 id="32-基于transformer的端到端检测">3.2 基于Transformer的端到端检测<a hidden class="anchor" aria-hidden="true" href="#32-基于transformer的端到端检测">#</a></h4>
-<p>当前最先进的敏感词消除系统采用<strong>Transformer架构</strong>的预训练语言模型：</p>
-<ol>
-<li><strong>BERT</strong>：擅长理解上下文语义</li>
-<li><strong>RoBERTa</strong>：优化训练策略的BERT变体</li>
-<li><strong>ERNIE</strong>：专为中文优化的知识增强模型</li>
-</ol>
-<p>这些模型可以处理更复杂的场景：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>原始文本：&#34;那个地方的管理者非常专制&#34;
-</span></span><span style="display:flex;"><span>模型识别：&#34;管理者非常专制&#34; → 政治敏感
-</span></span></code></pre></div><h3 id="4-现实挑战与平衡艺术">4. 现实挑战与平衡艺术<a hidden class="anchor" aria-hidden="true" href="#4-现实挑战与平衡艺术">#</a></h3>
-<h4 id="41-准确率与用户体验的权衡">4.1 准确率与用户体验的权衡<a hidden class="anchor" aria-hidden="true" href="#41-准确率与用户体验的权衡">#</a></h4>
-<p>过度过滤会导致**误杀率（False Positive Rate）**上升，影响正常表达。2023年某社交平台的用户调研显示：</p>
-<ul>
-<li>68%用户遭遇过内容被错误过滤</li>
-<li>42%用户因此减少发帖频率</li>
-<li>23%用户转向其他平台</li>
-</ul>
-<p>正如信息安全专家Bruce Schneier所说：&ldquo;没有完美的过滤系统，只有不断演进的攻防博弈。&ldquo;敏感词消除技术的未来，将是一场永不停歇的猫鼠游戏。</p>
+<h4 id="12-更进一步的安全aes">1.2 更进一步的安全——AES<a hidden class="anchor" aria-hidden="true" href="#12-更进一步的安全aes">#</a></h4>
+<p>1997年，NIST（美国国家标准与技术研究院）发起了一项公开竞赛，征集新的加密标准，经过数论评估，来自比利时的Joan Daemen和Vincent Rijmen设计的Rijndael算法被选为 <strong>AES（Advanced Encryption Standard，高级加密标准）</strong> 标准。2001年，NIST正式发布了AES标准，它支持128、192、256位三种密钥长度，在对称加密领域发挥极大作用，广泛用于各类协议，例如WPA2/3（用于WiFi身份认证和加密）、SSL/TLS（用于传输加密，<a href="../how-to-encrypt-web-connection/">本文</a>提到）、VPN（用于建立虚拟加密通信信道，例如企业内网）、硬盘加密等，一切看起来都那么完美，优雅而简单。</p>
+<p><em>所有的完美也确实都很易碎，只是时间问题而已</em> 。在后量子时代，量子计算机的威胁变得越加明显，例如Shor算法和Grover算法在理论上能够破解AES加密技术，Shor算法仍可破解但时间非常长；Grover算法能够将密钥搜索范围简化到平方根程度，例如AES-128的搜索空间为2^64个密钥，AES-256的搜索空间为2^128个密钥。虽然量子计算机的Grover算法会降低AES的安全性，但密钥最位数最多的AES-256被普遍估计在将来的10年内（2025-2035）仍然有足够的位数（2^128位）来抵御Grover算法攻击。</p>
+<p>当然，还有更多的加密技术，例如Google力推的ChaCha20加密算法、Salsa20（ChaCha20前身）等，在此列表说明：</p>
+<table>
+  <thead>
+      <tr>
+          <th>算法</th>
+          <th>密钥长度</th>
+          <th>特点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ChaCha20</td>
+          <td>256位</td>
+          <td>在移动端的性能优于AES且抗侧信道攻击，用于TLS1.3</td>
+      </tr>
+      <tr>
+          <td>Salsa20</td>
+          <td>256位</td>
+          <td>ChaCha20前身，设计简洁，用于开源项目</td>
+      </tr>
+      <tr>
+          <td>Twofish</td>
+          <td>128/256位</td>
+          <td>AES竞赛亚军，比AES更加灵活但没有普及，用于学术研究</td>
+      </tr>
+      <tr>
+          <td>Serpent</td>
+          <td>128/256位</td>
+          <td>AES竞赛季军，安全性极高但速度较慢，用于开源项目</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="2-使用非对称加密技术">2. 使用非对称加密技术<a hidden class="anchor" aria-hidden="true" href="#2-使用非对称加密技术">#</a></h3>
+<h4 id="21-质因数分解的魔法rsa">2.1 质因数分解的魔法——RSA<a hidden class="anchor" aria-hidden="true" href="#21-质因数分解的魔法rsa">#</a></h4>
+<p><strong>RSA (Rivest-Shamir-Adleman)</strong> 通过 <strong>单向陷门函数（Trapdoor One-Way Function）</strong> 在未掌握陷门的情况下极难破解的特性实现数据安全，两个巨大质数p、q乘积为N，而私钥ϕ(N)（等价于p和q）即为陷门，拥有陷门的人可以快速地解密和加密数据；而没有陷门的人能看到的只有公钥中的N（即pxq的乘积），以及一些辅助信息。他们需要得到ϕ(N)才能解密数据，最简单但运算量也最大的方法是分解质因数，但一个足够大的合数𝑁在目前已知的经典计算方法下，所需分解时间会非常非常长，超出任何实际可接受的范围。所以，我们通常认为在可接受的时间内，它是无法被破解的。</p>
+<blockquote>
+<p><strong>说人话版</strong> ：
+RSA的安全性的实质其实就是我们在小学五六年级学到的“质因数分解”，但它巧妙地将两个极其巨大的质数相乘计算得一个同样巨大的合数。由于被分解的合数过大导致不能在我们能接受的时间内计算出结果，所以我们将其近似看作无法破解。当然，在量子计算机迅猛发展的当下，RSA也并不安全，Shor算法能够高效地进行质因数分解运算，所以量子计算机一来RSA也得趴窝（战术摊手.avif）</p></blockquote>
+<h4 id="22-椭圆曲线的谜题ecc">2.2 椭圆曲线的谜题——ECC<a hidden class="anchor" aria-hidden="true" href="#22-椭圆曲线的谜题ecc">#</a></h4>
+<p><strong>ECC（Elliptic Curve Cryptography，椭圆曲线密码学）</strong> 以 <strong>椭圆曲线离散对数问题 (EC-DLP)</strong> 的困难性保证密钥不被破解，具体的算法是：给定椭圆曲线上一个点P和另一个点Q，判断Q是否是P的某个倍数（kP），但找到k是极其困难的。由于算法大大简化，所以ECC能够在更短的密钥长度下提供相同的安全性，而所需的性能开销也更小、计算速度更快、占用空间更小，适合移动设备和资源受限场景，广泛应用于SSL/TLS、数字签名（ECDSA）、密钥交换（ECDH）等场景。因为ECDLP的证明没有捷径，所以经典计算机需要极长的时间来破解ECDLP密钥，我们也将其近似看作无法破解。</p>
+<blockquote>
+<p><strong>说人话版</strong> ：</p>
+<p>这玩意就是用椭圆曲线的难题保证密钥安全性和数据安全的，说白了就是算一道没有简便方法的椭圆曲线证明题，所以这个算法比RSA更轻，更快。但这玩意也照样不抗量子计算机，Shor算法一来直接趴窝，<strong>草（一种植物）！</strong></p></blockquote>
+<h4 id="23-离散对数的难题dh">2.3 离散对数的难题——DH<a hidden class="anchor" aria-hidden="true" href="#23-离散对数的难题dh">#</a></h4>
+<p><strong>Diffie-Hellman (DH)</strong> 基于离散对数问题的困难性保护数据安全，即在一个有限域中，给定一个基数g、一个模数p，以及g的x次幂取模p的结果（g^x mod p），很难从中计算出x的值。但这个加密算法压根就不用来加密数据，而是用于交换密钥的，常见于TLS协议的密钥交换协议部分（详见<a href="../how-to-encrypt-web-connection/">本文</a>）。它的核心、唯一功能就是让双方在不传输明文密钥的情况下协商出一个相同的密钥用于加密。</p>
+<blockquote>
+<p><strong>说人话版</strong> ：</p>
+<p>这玩意不是拿来传数据的，是拿来协商密钥的，就凭着离散对数题难到爆炸的性质保护协商密钥的安全性，这破题难得要命，我也不知道咋讲，<strong>草（一种植物）！</strong></p></blockquote>
 <hr>
-<p><strong>参考资料：</strong></p>
-<ol>
-<li><a href="https://dl.acm.org/doi/10.1145/360825.360855">Aho-Corasick算法在多模式匹配中的应用</a></li>
-<li><a href="https://ieeexplore.ieee.org/document/8900003">中文敏感词检测的语义增强方法</a></li>
-<li><a href="https://arxiv.org/abs/1905.05583">BERT在内容安全中的应用</a></li>
-</ol>
+<p><strong>参考资料</strong> ：</p>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E5%AF%86">加密 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86">对称加密 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%B3%87%E6%96%99%E5%8A%A0%E5%AF%86%E6%A8%99%E6%BA%96">DES - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86">AES - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95">RSA加密算法 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E5%AF%86%E7%A0%81%E5%AD%A6">椭圆曲线密码学 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%BF%AA%E8%8F%B2-%E8%B5%AB%E7%88%BE%E6%9B%BC%E5%AF%86%E9%91%B0%E4%BA%A4%E6%8F%9B">Diffie-Hellman密钥交换 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/ChaCha20">ChaCha20 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Blowfish">Blowfish - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/RC4">RC4 - Wikipedia</a></li>
+</ul>
+<hr>
 
 
   </div>
