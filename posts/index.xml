@@ -6,16 +6,14 @@
     <description>Recent content in Posts on 温带反气旋的小站 wdfqx - Blog</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:09:14 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 Aug 2025 00:39:15 +0800</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>敏感词消除指南</title>
-      <link>/posts/sensitive-word-remove-guide/</link>
-      <pubDate>Mon, 11 Aug 2025 00:09:14 +0800</pubDate>
-      <guid>/posts/sensitive-word-remove-guide/</guid>
-      <description>&lt;hr&gt;
-&lt;h3 id=&#34;0-引言&#34;&gt;&lt;strong&gt;0. 引言&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;2018年，某国产手游因角色台词“自由”触发敏感词系统，导致全服玩家聊天框集体变成***，愤怒的玩家用“自\由”“自_由”等变体疯狂试探——&lt;strong&gt;这场行为艺术暴露了敏感词审查的荒诞本质&lt;/strong&gt;：它既是维护内容安全的“防火墙”，又是误杀率极高的“文字大逃杀”。&lt;/p&gt;</description>
+      <title>如何科学地消除敏感词</title>
+      <link>/posts/how-to-remove-sensitive-words-scientifically/</link>
+      <pubDate>Thu, 14 Aug 2025 00:39:15 +0800</pubDate>
+      <guid>/posts/how-to-remove-sensitive-words-scientifically/</guid>
+      <description>&lt;p&gt;某天深夜，当你正在社交媒体激情输出观点时，突然收到系统提示：&amp;ldquo;您发布的内容包含敏感信息&amp;rdquo;——这熟悉的红色感叹号背后，藏着怎样一套精密运转的&amp;quot;文字安检仪&amp;quot;？今天我们就来拆解这个让创作者又爱又恨的&lt;strong&gt;敏感词过滤系统&lt;/strong&gt;。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何安全地加密数据</title>
