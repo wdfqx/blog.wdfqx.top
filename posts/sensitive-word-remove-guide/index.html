@@ -181,12 +181,12 @@ body {
 </div>
   </header> 
   <div class="post-content"><hr>
-<h4 id="0-引言"><strong>0. 引言</strong><a hidden class="anchor" aria-hidden="true" href="#0-引言">#</a></h4>
+<h3 id="0-引言"><strong>0. 引言</strong><a hidden class="anchor" aria-hidden="true" href="#0-引言">#</a></h3>
 <p>2018年，某国产手游因角色台词“自由”触发敏感词系统，导致全服玩家聊天框集体变成***，愤怒的玩家用“自\由”“自_由”等变体疯狂试探——<strong>这场行为艺术暴露了敏感词审查的荒诞本质</strong>：它既是维护内容安全的“防火墙”，又是误杀率极高的“文字大逃杀”。</p>
 <p>那么，如何科学（且不误伤）地消除敏感词？</p>
 <hr>
-<h4 id="1-原始阶段关键词暴力匹配"><strong>1. 原始阶段：关键词暴力匹配</strong><a hidden class="anchor" aria-hidden="true" href="#1-原始阶段关键词暴力匹配">#</a></h4>
-<h5 id="11-字符串匹配正则表达式的屠杀"><strong>1.1 字符串匹配——正则表达式的屠杀</strong><a hidden class="anchor" aria-hidden="true" href="#11-字符串匹配正则表达式的屠杀">#</a></h5>
+<h3 id="1-原始阶段关键词暴力匹配"><strong>1. 原始阶段：关键词暴力匹配</strong><a hidden class="anchor" aria-hidden="true" href="#1-原始阶段关键词暴力匹配">#</a></h3>
+<h4 id="11-字符串匹配正则表达式的屠杀"><strong>1.1 字符串匹配——正则表达式的屠杀</strong><a hidden class="anchor" aria-hidden="true" href="#11-字符串匹配正则表达式的屠杀">#</a></h4>
 <p>早期敏感词过滤依赖<strong>正则表达式</strong>（如<code>/(自由|民主|六四)/gi</code>），直接替换命中词为***。</p>
 <ul>
 <li><strong>优点</strong>：简单粗暴，一行代码搞定</li>
@@ -198,15 +198,15 @@ body {
 </li>
 </ul>
 <p><strong>注</strong>：此方法现仅用于低风险场景，如游戏聊天室。</p>
-<h5 id="12-哈希表加速空间换时间的挣扎"><strong>1.2 哈希表加速——空间换时间的挣扎</strong><a hidden class="anchor" aria-hidden="true" href="#12-哈希表加速空间换时间的挣扎">#</a></h5>
+<h4 id="12-哈希表加速空间换时间的挣扎"><strong>1.2 哈希表加速——空间换时间的挣扎</strong><a hidden class="anchor" aria-hidden="true" href="#12-哈希表加速空间换时间的挣扎">#</a></h4>
 <p>将敏感词预存为哈希表（如<code>{&quot;自由&quot;:1, &quot;民主&quot;:1}</code>），查询效率O(1)，但依然<strong>无法解决语义问题</strong>：</p>
 <blockquote>
 <p>用户：“这部电影的<strong>自由</strong>主题很棒” → ***<br>
 系统：“检测到1级敏感词，已记录IP”</p></blockquote>
 <p><em>（战术摊手.avif）</em></p>
 <hr>
-<h4 id="2-进阶阶段语境化审查"><strong>2. 进阶阶段：语境化审查</strong><a hidden class="anchor" aria-hidden="true" href="#2-进阶阶段语境化审查">#</a></h4>
-<h5 id="21-机器学习贝叶斯分类器的救赎"><strong>2.1 机器学习——贝叶斯分类器的救赎</strong><a hidden class="anchor" aria-hidden="true" href="#21-机器学习贝叶斯分类器的救赎">#</a></h5>
+<h3 id="2-进阶阶段语境化审查"><strong>2. 进阶阶段：语境化审查</strong><a hidden class="anchor" aria-hidden="true" href="#2-进阶阶段语境化审查">#</a></h3>
+<h4 id="21-机器学习贝叶斯分类器的救赎"><strong>2.1 机器学习——贝叶斯分类器的救赎</strong><a hidden class="anchor" aria-hidden="true" href="#21-机器学习贝叶斯分类器的救赎">#</a></h4>
 <p>通过训练样本（如10万条标注“敏感/非敏感”的文本），计算词频概率：</p>
 <ul>
 <li>若“自由”在敏感文本中出现概率&gt;80%，则标记</li>
@@ -218,7 +218,7 @@ body {
 <li>“自由落体实验” → 非敏感（概率7%）</li>
 </ul>
 <p><em>但所有的完美都是易碎的</em>：2016年某高校论文显示，此类模型对反讽识别准确率仅<strong>54%</strong>（例：“这政策真是太自由了”）。</p>
-<h5 id="22-规则引擎人工智障的巅峰"><strong>2.2 规则引擎——人工智障的巅峰</strong><a hidden class="anchor" aria-hidden="true" href="#22-规则引擎人工智障的巅峰">#</a></h5>
+<h4 id="22-规则引擎人工智障的巅峰"><strong>2.2 规则引擎——人工智障的巅峰</strong><a hidden class="anchor" aria-hidden="true" href="#22-规则引擎人工智障的巅峰">#</a></h4>
 <p>定义<strong>200+条规则</strong>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;自由&#34;</span> <span style="color:#f92672">in</span> text:  
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (<span style="color:#e6db74">&#34;落体&#34;</span> <span style="color:#f92672">in</span> text <span style="color:#f92672">or</span> <span style="color:#e6db74">&#34;度&#34;</span> <span style="color:#f92672">in</span> text):  
@@ -229,8 +229,8 @@ body {
 <li>维护成本爆炸（每天更新规则）</li>
 </ul>
 <hr>
-<h4 id="3-终极形态ai语义绞杀"><strong>3. 终极形态：AI语义绞杀</strong><a hidden class="anchor" aria-hidden="true" href="#3-终极形态ai语义绞杀">#</a></h4>
-<h5 id="31-nlp模型bert的黑暗森林"><strong>3.1 NLP模型——BERT的黑暗森林</strong><a hidden class="anchor" aria-hidden="true" href="#31-nlp模型bert的黑暗森林">#</a></h5>
+<h3 id="3-终极形态ai语义绞杀"><strong>3. 终极形态：AI语义绞杀</strong><a hidden class="anchor" aria-hidden="true" href="#3-终极形态ai语义绞杀">#</a></h3>
+<h4 id="31-nlp模型bert的黑暗森林"><strong>3.1 NLP模型——BERT的黑暗森林</strong><a hidden class="anchor" aria-hidden="true" href="#31-nlp模型bert的黑暗森林">#</a></h4>
 <p>使用预训练模型（如BERT）分析语义：</p>
 <ul>
 <li>步骤1：将文本向量化（如“自由”在不同语境下编码为不同128维向量）</li>
@@ -240,7 +240,7 @@ body {
 <ul>
 <li>不显示***，直接<strong>限流</strong>或<strong>仅自己可见</strong></li>
 </ul>
-<h5 id="32-跨模态审查图片ocr语音asr"><strong>3.2 跨模态审查——图片OCR+语音ASR</strong><a hidden class="anchor" aria-hidden="true" href="#32-跨模态审查图片ocr语音asr">#</a></h5>
+<h4 id="32-跨模态审查图片ocr语音asr"><strong>3.2 跨模态审查——图片OCR+语音ASR</strong><a hidden class="anchor" aria-hidden="true" href="#32-跨模态审查图片ocr语音asr">#</a></h4>
 <ul>
 <li>文字截图？OCR提取后过滤</li>
 <li>语音骂人？ASR转文本+敏感词检测</li>
@@ -248,14 +248,14 @@ body {
 </ul>
 <p><em>（用户愤怒地摔手机.gif）</em></p>
 <hr>
-<h4 id="4-对抗与反制"><strong>4. 对抗与反制</strong><a hidden class="anchor" aria-hidden="true" href="#4-对抗与反制">#</a></h4>
-<h5 id="41-用户游击战"><strong>4.1 用户游击战</strong><a hidden class="anchor" aria-hidden="true" href="#41-用户游击战">#</a></h5>
+<h3 id="4-对抗与反制"><strong>4. 对抗与反制</strong><a hidden class="anchor" aria-hidden="true" href="#4-对抗与反制">#</a></h3>
+<h4 id="41-用户游击战"><strong>4.1 用户游击战</strong><a hidden class="anchor" aria-hidden="true" href="#41-用户游击战">#</a></h4>
 <ul>
 <li><strong>变异体</strong>：ⓧⓨ自⃑由⃑、字⃒符⃒间⃒隔⃒</li>
 <li><strong>隐喻</strong>：“那个不能说的年份”“某广场事件”</li>
 <li><strong>图片化</strong>：敏感词转为表情包（🐦代替“自由鸟”）</li>
 </ul>
-<h5 id="42-平台的量子纠缠"><strong>4.2 平台的量子纠缠</strong><a hidden class="anchor" aria-hidden="true" href="#42-平台的量子纠缠">#</a></h5>
+<h4 id="42-平台的量子纠缠"><strong>4.2 平台的量子纠缠</strong><a hidden class="anchor" aria-hidden="true" href="#42-平台的量子纠缠">#</a></h4>
 <ul>
 <li><strong>AI对抗训练</strong>：用GAN生成对抗样本骗过审查模型</li>
 <li><strong>数据投毒</strong>：故意提交错误标注污染训练集</li>
