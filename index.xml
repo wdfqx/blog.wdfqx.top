@@ -6,16 +6,15 @@
     <description>Recent content on 温带反气旋的小站 wdfqx - Blog</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 09 Aug 2025 21:58:49 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 Aug 2025 00:09:38 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何安全地加密数据</title>
-      <link>/posts/how-to-encrypt-data-safely/</link>
-      <pubDate>Sat, 09 Aug 2025 21:58:49 +0800</pubDate>
-      <guid>/posts/how-to-encrypt-data-safely/</guid>
+      <link>/posts/%E5%A6%82%E4%BD%95%E5%AE%89%E5%85%A8%E5%9C%B0%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Thu, 14 Aug 2025 00:09:38 +0800</pubDate>
+      <guid>/posts/%E5%A6%82%E4%BD%95%E5%AE%89%E5%85%A8%E5%9C%B0%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE/</guid>
       <description>&lt;h3 id=&#34;0-引言&#34;&gt;0. 引言&lt;/h3&gt;
-&lt;p&gt;2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
-这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？&lt;/p&gt;</description>
+&lt;p&gt;2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向&lt;strong&gt;自动化过滤&lt;/strong&gt;的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&amp;quot;***&amp;ldquo;是如何产生的吗？&lt;/p&gt;</description>
     </item>
     <item>
       <title>网络通信是怎么加密的</title>
@@ -39,7 +38,7 @@
 &lt;p&gt;Telegram：&lt;a href=&#34;https://t.me/wdfqx&#34;&gt;@wdfqx&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;GitHub：&lt;a href=&#34;https://github.com/wdfqx&#34;&gt;@wdfqx&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;网站运行&#34;&gt;网站运行：&lt;/h3&gt;
-&lt;p&gt;本站托管于&lt;a href=&#34;https://www.netlify.com/&#34;&gt;Netlify&lt;/a&gt;，由&lt;a href=&#34;https://www.jsdmirror.com/&#34;&gt;jsdmirror&lt;/a&gt;提供图片存储支持，由CloudFlare R2提供文件存储支持。&lt;/p&gt;
+&lt;p&gt;本站托管于&lt;a href=&#34;https://www.rainyun.com/&#34;&gt;雨云&lt;/a&gt;，由&lt;a href=&#34;https://www.jsdmirror.com/&#34;&gt;jsdmirror&lt;/a&gt;提供图片存储支持，由CloudFlare R2提供文件存储支持。&lt;/p&gt;
 &lt;h3 id=&#34;鸣谢列表排名不分先后尽管都没给赞助就是&#34;&gt;鸣谢列表（排名不分先后，尽管都没给赞助就是）：&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Netlify, Inc. （免费套餐真香）&lt;/li&gt;
@@ -55,14 +54,6 @@
       <guid>/posts/web-advertising-revenue-guide/</guid>
       <description>&lt;p&gt;在2025年的今天，互联网广告已经&lt;strong&gt;充斥我们的生活&lt;/strong&gt;，&lt;em&gt;那么，广告巨头们是怎么赚钱的？&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;广告作为一种需要被广泛传播的信息，最需要的就是一个能高效传播信息的媒介，而互联网作为信息时代的高效传播媒介，天然契合广告的需求——所以互联网天然地适合投放广告。&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>/posts/000/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/posts/000/</guid>
-      <description>&lt;h3 id=&#34;0-引言&#34;&gt;0. 引言&lt;/h3&gt;
-&lt;p&gt;2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向&lt;strong&gt;自动化过滤&lt;/strong&gt;的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&amp;quot;***&amp;ldquo;是如何产生的吗？&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
