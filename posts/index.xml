@@ -17,6 +17,16 @@
 &lt;p&gt;2012年，新浪微博因用户发布不当内容被约谈后，紧急上线了国内首个大规模应用的敏感词过滤系统。这一事件标志着中文互联网内容审核从人工为主转向&lt;strong&gt;自动化过滤&lt;/strong&gt;的时代。如今，敏感词消除已成为各类UGC平台的标配功能——但你真的了解屏幕背后那些&amp;quot;***&amp;ldquo;是如何产生的吗？&lt;/p&gt;</description>
     </item>
     <item>
+      <title>敏感词消除指南</title>
+      <link>/posts/sensitive-word-remove-guide/</link>
+      <pubDate>Mon, 11 Aug 2025 00:09:14 +0800</pubDate>
+      <guid>/posts/sensitive-word-remove-guide/</guid>
+      <description>&lt;hr&gt;
+&lt;h3 id=&#34;敏感词消除指南从关键词屏蔽到ai语义绞杀&#34;&gt;&lt;strong&gt;敏感词消除指南：从关键词屏蔽到AI语义绞杀&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;0-引言&#34;&gt;&lt;strong&gt;0. 引言&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;2018年，某国产手游因角色台词“自由”触发敏感词系统，导致全服玩家聊天框集体变成***，愤怒的玩家用“自\由”“自_由”等变体疯狂试探——&lt;strong&gt;这场行为艺术暴露了敏感词审查的荒诞本质&lt;/strong&gt;：它既是维护内容安全的“防火墙”，又是误杀率极高的“文字大逃杀”。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>网络通信是怎么加密的</title>
       <link>/posts/how-to-encrypt-web-connection/</link>
       <pubDate>Tue, 05 Aug 2025 00:20:28 +0800</pubDate>
