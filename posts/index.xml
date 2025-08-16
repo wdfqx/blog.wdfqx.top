@@ -1,48 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Posts on 温带反气旋的小站 wdfqx - Blog</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on 温带反气旋的小站 wdfqx - Blog</description>
-    <generator>Hugo -- 0.148.2</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 14 Aug 2025 00:39:15 +0800</lastBuildDate>
-    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>如何科学地消除敏感词</title>
-      <link>/posts/how-to-remove-sensitive-words-scientifically/</link>
-      <pubDate>Thu, 14 Aug 2025 00:39:15 +0800</pubDate>
-      <guid>/posts/how-to-remove-sensitive-words-scientifically/</guid>
-      <description>&lt;p&gt;某天深夜，当你正在社交媒体激情输出观点时，突然收到系统提示：&amp;ldquo;您发布的内容包含敏感信息&amp;rdquo;——这熟悉的红色感叹号背后，藏着怎样一套精密运转的&amp;quot;文字安检仪&amp;quot;？今天我们就来拆解这个让创作者又爱又恨的&lt;strong&gt;敏感词过滤系统&lt;/strong&gt;。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>如何安全地加密数据</title>
-      <link>/posts/how-to-encrypt-data-safely/</link>
-      <pubDate>Sat, 09 Aug 2025 21:58:49 +0800</pubDate>
-      <guid>/posts/how-to-encrypt-data-safely/</guid>
-      <description>&lt;h3 id=&#34;0-引言&#34;&gt;0. 引言&lt;/h3&gt;
-&lt;p&gt;2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
-这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>网络通信是怎么加密的</title>
-      <link>/posts/how-to-encrypt-web-connection/</link>
-      <pubDate>Tue, 05 Aug 2025 00:20:28 +0800</pubDate>
-      <guid>/posts/how-to-encrypt-web-connection/</guid>
-      <description>&lt;h3 id=&#34;0引言&#34;&gt;0.引言&lt;/h3&gt;
-&lt;p&gt;这是Google的官方网站，在这里我们可以看到浏览器地址栏有一个“tune”图标表示这个连接是安全的。同时，我们可以点击这个图标，会跳出一个卡片（也就是图中的那个），显示一些扩展信息，比如“证书”之类。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 温带反气旋的小站 wdfqx - Blog</title><link>/posts/</link><description>Recent content in Posts on 温带反气旋的小站 wdfqx - Blog</description><generator>Hugo -- 0.148.2</generator><language>zh-CN</language><lastBuildDate>Thu, 14 Aug 2025 00:39:15 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>如何科学地消除敏感词</title><link>/posts/how-to-remove-sensitive-words-scientifically/</link><pubDate>Thu, 14 Aug 2025 00:39:15 +0800</pubDate><guid>/posts/how-to-remove-sensitive-words-scientifically/</guid><description>&lt;p>某天深夜，当你正在社交媒体激情输出观点时，突然收到系统提示：&amp;ldquo;您发布的内容包含敏感信息&amp;rdquo;——这熟悉的红色感叹号背后，藏着怎样一套精密运转的&amp;quot;文字安检仪&amp;quot;？今天我们就来拆解这个让创作者又爱又恨的&lt;strong>敏感词过滤系统&lt;/strong>。&lt;/p></description></item><item><title>如何安全地加密数据</title><link>/posts/how-to-encrypt-data-safely/</link><pubDate>Sat, 09 Aug 2025 21:58:49 +0800</pubDate><guid>/posts/how-to-encrypt-data-safely/</guid><description>&lt;h3 id="0-引言">0. 引言&lt;/h3>
+&lt;p>2011年，著名中国技术论坛CSDN因为明文存储用户的密码及SQL数据库被攻击者注入等原因，泄露了600余万用户的完全未经脱敏的私人信息，包括但不限于用户名、密码、Email地址等，导致了大量用户被撞库攻击，成为数据安全行业的反面教材——这体现了数据加密和密码哈希化的必要性。
+这起事件后期推动了数据加密的潮流，越来越多的人开始重视自己的数据安全。数据安全几乎是最重要的一个部分就是加密，那么我们怎么安全地加密数据呢？&lt;/p></description></item><item><title>网络通信是怎么加密的</title><link>/posts/how-to-encrypt-web-connection/</link><pubDate>Tue, 05 Aug 2025 00:20:28 +0800</pubDate><guid>/posts/how-to-encrypt-web-connection/</guid><description>&lt;h3 id="0引言">0.引言&lt;/h3>
+&lt;p>这是Google的官方网站，在这里我们可以看到浏览器地址栏有一个“tune”图标表示这个连接是安全的。同时，我们可以点击这个图标，会跳出一个卡片（也就是图中的那个），显示一些扩展信息，比如“证书”之类。
 那么……为什么浏览器会显示这个图标呢？它是怎么判断连接是否“安全”的？
-&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.jsdmirror.com/gh/wdfqx/img/img/20250804003918390.avif&#34;&gt;
-&lt;strong&gt;浏览器怎么定义“安全”？为什么要有这个图标？&lt;/strong&gt;
-答案是&lt;strong&gt;HTTPS（Hypertext Transfer Protocol Secure，超文本传输安全协议）&lt;/strong&gt;，它通过一系列手段将网络通信的内容加密避免被攻击者截获。在互联网建立初期（1990年代-2000年代初期），绝大多数互联网通信都是明文的，很容易被截获，当HTTPS出现后浏览器为将HTTPS网站和HTTP网站区分就在HTTPS网站上加了这个图标。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>互联网广告捞金指南</title>
-      <link>/posts/web-advertising-revenue-guide/</link>
-      <pubDate>Thu, 24 Jul 2025 20:43:19 +0800</pubDate>
-      <guid>/posts/web-advertising-revenue-guide/</guid>
-      <description>&lt;p&gt;在2025年的今天，互联网广告已经&lt;strong&gt;充斥我们的生活&lt;/strong&gt;，&lt;em&gt;那么，广告巨头们是怎么赚钱的？&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;广告作为一种需要被广泛传播的信息，最需要的就是一个能高效传播信息的媒介，而互联网作为信息时代的高效传播媒介，天然契合广告的需求——所以互联网天然地适合投放广告。&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;img loading="lazy" src="https://cdn.jsdmirror.com/gh/wdfqx/img/img/20250804003918390.avif">
+&lt;strong>浏览器怎么定义“安全”？为什么要有这个图标？&lt;/strong>
+答案是&lt;strong>HTTPS（Hypertext Transfer Protocol Secure，超文本传输安全协议）&lt;/strong>，它通过一系列手段将网络通信的内容加密避免被攻击者截获。在互联网建立初期（1990年代-2000年代初期），绝大多数互联网通信都是明文的，很容易被截获，当HTTPS出现后浏览器为将HTTPS网站和HTTP网站区分就在HTTPS网站上加了这个图标。&lt;/p></description></item><item><title>互联网广告捞金指南</title><link>/posts/web-advertising-revenue-guide/</link><pubDate>Thu, 24 Jul 2025 20:43:19 +0800</pubDate><guid>/posts/web-advertising-revenue-guide/</guid><description>&lt;p>在2025年的今天，互联网广告已经&lt;strong>充斥我们的生活&lt;/strong>，&lt;em>那么，广告巨头们是怎么赚钱的？&lt;/em>&lt;/p>
+&lt;p>&lt;strong>广告作为一种需要被广泛传播的信息，最需要的就是一个能高效传播信息的媒介，而互联网作为信息时代的高效传播媒介，天然契合广告的需求——所以互联网天然地适合投放广告。&lt;/strong>&lt;/p></description></item></channel></rss>
